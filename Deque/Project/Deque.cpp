@@ -1,8 +1,5 @@
 #include <iostream>
 
-#define _CRTDBG_MAP_ALLOC
-#include <crtdbg.h>
-
 #include "Deque.h"
 #include "MyMemStrategy.h"
 
@@ -105,10 +102,6 @@ int main(void) {
   cout << "Test 15: op= (move semantics)" << endl;
   dq = std::move(dq2);
   Test("< 1 2 3 >", dq);
-
-  _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-  _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);
-  _CrtSetReportFile(_CRT_WARN, _CRTDBG_FILE_STDOUT);
 
   return 0;
 }
